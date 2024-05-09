@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> leia 3 notas e crie a média aritmédica, se for maior ou igual a 6 aprovado se for menor reprovado</title>
+</head>
+<body>
+    <h1>1.leia 3 notas e crie a média aritmédica, se for maior ou igual a 6 aprovado, se for menor reprovado</h1>
+
+    
+    <p>Digite seu nome:</p> <span id="nome"></span>
+    <p>Digite a nota 1:</p> <span id="nota1"></span>
+    <p>Digite a nota 2:</p> <span id="nota2"></span>
+    <p>Digite a nota 3:</p><span id="nota3"></span>
+
+
+    <p>Nota maior:</p><span id="resultado1"></span>
+    <p>Nota mediana:</p><span id="resultado2"></span>
+    <p>Nota menor:</p><span id="resultado3"></span>
+    
+
+    <p>Resultado da média:</p><span id="resultadomedia"></span>
+    <p>Resultado da aprovação:</p><span id="resultadofinal"></span>
+    
+</body>
+
+<script>
+
+let nome
+let nota1
+let nota2
+let resultado1
+let resultado2
+let resultado3
+let resultadomedia
+let resultadofinal
+
+nome= prompt("Digite o nome do aluno")
+nota1=Number(prompt( "Digite a nota 1"))
+nota2=Number(prompt( "Digite a nota 2"))
+nota3=Number(prompt( "Digite a nota 3"))
+
+resultadomedia= nota1+nota2+nota3/3
+
+if(resultadomedia>=6){
+
+resultadofinal=  nome+"aprovado"+ "com a média de"+ resultadomedia
+}else{   
+resultadofinal= nome+"reprovado"+ "com a média de"+ resultadomedia
+}  
+
+
+//
+
+if (nota1 > nota2 && nota1 > nota3) {
+        resultado1 = nota1
+        if (nota2 > nota3) {
+            resultado2 = nota2
+            resultado3 = nota3
+        } else {
+            resultado2 = nota3
+            resultado3 = nota2
+        }
+
+    }
+ //
+
+if (nota2 > nota1 && nota2 > nota3){
+    resultado1 = nota2
+    if (nota1>nota3){
+        resultado2= nota1
+        resultado3= nota3
+    } else {
+        resultado2= nota3
+        resultado3= nota1
+    }
+}
+//
+
+if (nota3 > nota1 && nota3> nota2){
+    resultado1 = nota3
+ if (nota1 > nota2){
+    resultado2= nota1
+    resultado3= nota2
+ }else{
+    resultado2= nota2
+    resultado3= nota1
+}
+}
+
+
+
+
+
+
+document.getElementById('nome').innerHTML=nome
+document.getElementById('nota1').innerHTML=nota1
+document.getElementById('nota2').innerHTML=nota2
+document.getElementById('nota3').innerHTML=nota3
+document.getElementById('resultado1').innerHTML=resultado1
+document.getElementById('resultado2').innerHTML=resultado2
+document.getElementById('resultado3').innerHTML=resultado3
+document.getElementById('resultadomedia').innerHTML=resultadomedia
+document.getElementById('resultadofinal').innerHTML=resultadofinal
+
+</script>
+</html>

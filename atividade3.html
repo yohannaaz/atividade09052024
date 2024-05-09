@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> 3.Leia o pedido de fast food e depois imprima o preço e a opção que ele escolher</h1>  
+
+  <p>Digite a quantidade de Big Super Sanduba (5,00): <span id="quantidade1"></span></p>
+  <p>Digite a quantidade de Quase Super Sanduba (3,00): <span id="quantidade2"></span></p>
+  <p>Digite a quantidade de Mirradus Sanduba (1,50): <span id="quantidade3"></span></p>
+  
+  <p>Combo Big super sanduba: <span id="combo1"></span> </p>
+  <p>Combo Quase Super Sanduba: <span id="combo2"></span> </p>
+  <p>Combo Mirradus Sanduba: <span id="combo3"></span> </p>
+
+  <p>Pedido: <span id="resultadopedido"></span></p>
+  <p>Valor Total: <span id="valortotal"></span></p>
+
+
+</body>
+
+<script>
+
+
+    let combo1
+    let quantidade1
+    let combo2
+    let quantidade2
+    let combo3
+    let quantidade3
+    let resultadopedido
+    let valortotal
+
+    quantidade1=Number(prompt( "Digite a quantidade de Big Super Sanduba (5,00):"))
+    quantidade2=Number(prompt( "Digite a quantidade de Quase Super Sanduba (3,00):"))
+    quantidade3=Number(prompt( "Digite a quantidade de Mirradus Sanduba (1,50):"))
+
+   
+    
+    combo1= 5.00*quantidade1
+    combo2= 3.00*quantidade2
+    combo3= 1.50*quantidade3
+
+    resultadopedido= quantidade1+ " Big super sanduba, "+quantidade2+ "Quase super sanduba ,"+ quantidade3 + "Mirradus sanduba"
+    valortotal= combo1+combo2+combo3
+
+    document.getElementById('quantidade1').innerHTML = quantidade1
+    document.getElementById('quantidade2').innerHTML = quantidade2
+    document.getElementById('quantidade3').innerHTML = quantidade3
+    document.getElementById('combo1').innerHTML = combo1
+    document.getElementById('combo2').innerHTML = combo2
+    document.getElementById('combo3').innerHTML = combo3
+    document.getElementById('resultadopedido').innerHTML = resultadopedido
+    document.getElementById('valortotal').innerHTML = valortotal
+ 
+</script>
+</html>
